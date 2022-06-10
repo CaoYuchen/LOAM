@@ -1,0 +1,8 @@
+prefix=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/laser_odometry/install
+
+Name: velodyne_msgs
+Description: Description of velodyne_msgs
+Version: 1.2.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs

@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/ground_based_autonomy/devel/lib/libisam.a"
+  "/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/ground_based_autonomy/devel/lib/libisam.pdb"
+  "CMakeFiles/isamlib.dir/Anchor.cpp.o"
+  "CMakeFiles/isamlib.dir/Anchor.cpp.o.d"
+  "CMakeFiles/isamlib.dir/Cholesky.cpp.o"
+  "CMakeFiles/isamlib.dir/Cholesky.cpp.o.d"
+  "CMakeFiles/isamlib.dir/ChowLiuTree.cpp.o"
+  "CMakeFiles/isamlib.dir/ChowLiuTree.cpp.o.d"
+  "CMakeFiles/isamlib.dir/Covariances.cpp.o"
+  "CMakeFiles/isamlib.dir/Covariances.cpp.o.d"
+  "CMakeFiles/isamlib.dir/GLCReparam.cpp.o"
+  "CMakeFiles/isamlib.dir/GLCReparam.cpp.o.d"
+  "CMakeFiles/isamlib.dir/Node.cpp.o"
+  "CMakeFiles/isamlib.dir/Node.cpp.o.d"
+  "CMakeFiles/isamlib.dir/Optimizer.cpp.o"
+  "CMakeFiles/isamlib.dir/Optimizer.cpp.o.d"
+  "CMakeFiles/isamlib.dir/OrderedSparseMatrix.cpp.o"
+  "CMakeFiles/isamlib.dir/OrderedSparseMatrix.cpp.o.d"
+  "CMakeFiles/isamlib.dir/Slam.cpp.o"
+  "CMakeFiles/isamlib.dir/Slam.cpp.o.d"
+  "CMakeFiles/isamlib.dir/SparseMatrix.cpp.o"
+  "CMakeFiles/isamlib.dir/SparseMatrix.cpp.o.d"
+  "CMakeFiles/isamlib.dir/SparseSystem.cpp.o"
+  "CMakeFiles/isamlib.dir/SparseSystem.cpp.o.d"
+  "CMakeFiles/isamlib.dir/SparseVector.cpp.o"
+  "CMakeFiles/isamlib.dir/SparseVector.cpp.o.d"
+  "CMakeFiles/isamlib.dir/covariance.cpp.o"
+  "CMakeFiles/isamlib.dir/covariance.cpp.o.d"
+  "CMakeFiles/isamlib.dir/glc.cpp.o"
+  "CMakeFiles/isamlib.dir/glc.cpp.o.d"
+  "CMakeFiles/isamlib.dir/numericalDiff.cpp.o"
+  "CMakeFiles/isamlib.dir/numericalDiff.cpp.o.d"
+  "CMakeFiles/isamlib.dir/util.cpp.o"
+  "CMakeFiles/isamlib.dir/util.cpp.o.d"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/isamlib.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

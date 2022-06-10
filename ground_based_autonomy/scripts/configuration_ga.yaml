@@ -1,0 +1,162 @@
+visualInertialOdometer:
+  useImuAcceleration: false
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+scanRegister:
+  voxelSize: 0.2
+  blindRadius: 0.1
+  skipFrameNum: 1
+  useImuAcceleration: false
+  useConstElevation: false
+  useLevelMotion: false
+
+scanRegistration:
+  useHDL32: false
+  voxelSize: 0.2
+  blindRadius: 0.1
+  checkImuToStart: true
+  useImuAcceleration: false
+  useConstElevation: false
+  useLevelMotion: false
+
+laserOdometry:
+  useHDL32: false
+  skipFrameNum: 1
+  motionSensitive: false
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMapper:
+  dwsizeCloud: false
+  cornerVoxelSize: 0.2
+  surfVoxelSize: 0.4
+  surroundVoxelSize: 0.6
+  useDecay: true
+  forceDecay: false
+  forceDecayDis: 50
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchToInit: true
+  imuRollPitchInitRadius: 4.0
+  useIMURollPitchOnly: true
+
+laserMapping:
+  useHDL32: false
+  dwsizeCloud: false
+  cornerVoxelSize: 0.2
+  surfVoxelSize: 0.4
+  surroundVoxelSize: 0.6
+  useDecay: true
+  forceDecay: false
+  forceDecayDis: 50
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchToInit: true
+  imuRollPitchInitRadius: 4.0
+  useIMURollPitchOnly: true
+
+laserMatcher1:
+  useMatching: true
+  useCamToInit: false
+  camInitRadius: 4.0
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatcher2:
+  useMatching: true
+  useCamToInit: false
+  camInitRadius: 4.0
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatcher3:
+  useMatching: true
+  useCamToInit: false
+  camInitRadius: 4.0
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatcher4:
+  useMatching: true
+  useCamToInit: false
+  camInitRadius: 4.0
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatching1:
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatching2:
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatching3:
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+laserMatching4:
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+
+transformMaintainer:
+  odomSmoothRate: 0.2
+  imuSmoothRate: 0.05
+  veloSmoothRate: 0.1
+  poseSmoothRate: 0.1
+  useImuAcceleration: false
+  useConstElevation: false
+  useLevelMotion: false
+
+transformMaintenance:
+  useHDL32: false
+  odomSmoothRate: 0.2
+  imuSmoothRate: 0.05
+  veloSmoothRate: 0.1
+  poseSmoothRate: 0.1
+  useImuAcceleration: false
+  useConstElevation: false
+  useLevelMotion: false
+
+mapLocalization:
+  sendLaserCloud: true
+  sendMapCloud: true
+  laserCloudSkipDis: 0.02
+  laserCloudStackNum: 5
+  mapVoxelSize: 0.4
+  surroundVoxelSize: 0.6
+  useConstElevation: false
+  useLevelMotion: false
+  useIMURollPitchOnly: true
+  poseInitX: 0
+  poseInitY: 0
+  poseInitZ: 0
+  poseInitYaw: 0
+  poseInitPitch: 0
+  poseInitRoll: 0
+
+mapParser:
+  maxPointReadNum: 3000000
+  voxelSize: 0.4
+
+velodyneCloudReceiver:
+  logSensorPath: false
+  laserCloudSkipDis: 1.0
+
+velodyneCloudStacker:
+  saveLaserCloud: false
+  logSensorPath: false
+
+velodyneCloudGenerator:
+  maxPointNum: 30000000

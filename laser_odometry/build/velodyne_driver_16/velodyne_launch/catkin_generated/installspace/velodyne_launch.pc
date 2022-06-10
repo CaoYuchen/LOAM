@@ -1,0 +1,8 @@
+prefix=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/laser_odometry/install
+
+Name: velodyne_launch
+Description: Description of velodyne_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+local_planner:online_pose_graph:point_cloud_stacker:terrain_analysis:vehicle_simulator:velodyne_simulator/velodyne_description:velodyne_simulator/velodyne_gazebo_plugins:velodyne_simulator/velodyne_simulator:waypoint_example
+-DCATKIN_DEVEL_PREFIX=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/ground_based_autonomy/devel -DCMAKE_INSTALL_PREFIX=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/ground_based_autonomy/install -G Unix Makefiles

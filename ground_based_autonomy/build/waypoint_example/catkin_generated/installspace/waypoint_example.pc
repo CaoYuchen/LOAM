@@ -1,0 +1,8 @@
+prefix=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/ground_based_autonomy/install
+
+Name: waypoint_example
+Description: Description of waypoint_example
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs pcl_ros

@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="pointCloudNum" default="2"/>
+  <arg name="pointcloud_in" default="$(env HOME)/recordings/pointcloud_"/>
+  <arg name="trajectory_in" default="$(env HOME)/recordings/trajectory_"/>
+  <arg name="pointcloud_out" default="$(env HOME)/recordings/pointcloud_stacked.ply"/>
+  <arg name="trajectory_out" default="$(env HOME)/recordings/trajectory_stacked.ply"/>
+
+  <node pkg="point_cloud_stacker" type="LoopClosureStacker" name="LoopClosureStacker" output="screen" required="true">
+    <param name="pointCloudNum" type="int" value="$(arg pointCloudNum)" />
+    <param name="pointcloud_in" type="string" value="$(arg pointcloud_in)" />
+    <param name="trajectory_in" type="string" value="$(arg trajectory_in)" />
+    <param name="pointcloud_out" type="string" value="$(arg pointcloud_out)" />
+    <param name="trajectory_out" type="string" value="$(arg trajectory_out)" />
+  </node>
+
+</launch>

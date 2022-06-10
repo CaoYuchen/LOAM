@@ -1,0 +1,8 @@
+prefix=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/laser_odometry/install
+
+Name: receive_xsens
+Description: Description of receive_xsens
+Version: 0.0.2
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs sensor_msgs

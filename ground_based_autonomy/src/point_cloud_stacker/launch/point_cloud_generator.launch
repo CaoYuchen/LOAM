@@ -1,0 +1,17 @@
+<launch>
+
+  <arg name="pointcloud_in" default="$(env HOME)/recordings/pointcloud.ply"/>
+  <arg name="trajectory_in" default="$(env HOME)/recordings/trajectory.ply"/>
+  <arg name="key_pose_in" default="$(env HOME)/recordings/keypose.ply"/>
+  <arg name="pointcloud_out" default="$(env HOME)/recordings/pointcloud_loop_closed.ply"/>
+  <arg name="trajectory_out" default="$(env HOME)/recordings/trajectory_loop_closed.ply"/>
+
+  <node pkg="point_cloud_stacker" type="pointCloudGenerator" name="pointCloudGenerator" output="screen" required="true">
+    <param name="pointcloud_in" type="string" value="$(arg pointcloud_in)" />
+    <param name="trajectory_in" type="string" value="$(arg trajectory_in)" />
+    <param name="key_pose_in" type="string" value="$(arg key_pose_in)" />
+    <param name="pointcloud_out" type="string" value="$(arg pointcloud_out)" />
+    <param name="trajectory_out" type="string" value="$(arg trajectory_out)" />
+  </node>
+
+</launch>

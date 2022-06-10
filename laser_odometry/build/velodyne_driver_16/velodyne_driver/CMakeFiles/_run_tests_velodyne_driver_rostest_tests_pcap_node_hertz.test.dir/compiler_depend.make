@@ -1,0 +1,2 @@
+# Empty custom commands generated dependencies file for _run_tests_velodyne_driver_rostest_tests_pcap_node_hertz.test.
+# This may be replaced when dependencies are built.

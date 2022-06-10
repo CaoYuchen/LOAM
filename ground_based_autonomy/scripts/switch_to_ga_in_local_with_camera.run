@@ -1,0 +1,38 @@
+#!/bin/bash
+echo ""
+echo "Switching to ground-based autonomy in localization with camera."
+echo ""
+
+IFS=''
+
+[ -z "$STENCIL_DEFAULT" ] && STENCIL_DEFAULT="abc"
+if env | grep -q ^STENCIL_DEFAULT=
+then
+  export STENCIL=$STENCIL_DEFAULT
+  echo "Will use default location for stencil code: $STENCIL"
+else
+  export STENCIL=$HOME/realearth/stencil
+fi
+
+default_yaml=$STENCIL/install/share/clay_launch/params/default.yaml
+default_yaml_bak=$STENCIL/install/share/clay_launch/params/default.yaml.bak
+configuration_yaml=~/ground_based_autonomy/scripts/configuration_ga.yaml
+
+{
+for i in {1..30}; do
+  read line
+  echo $line
+done < $default_yaml_bak
+
+while read line; do
+  echo $line
+done < $configuration_yaml
+} > $default_yaml
+
+cp ~/ground_based_autonomy/scripts/start_ga_in_local_with_camera.sh $STENCIL/install/lib/clay_launch/scripts/start.sh
+cp ~/ground_based_autonomy/scripts/stop_ga_in_local_with_camera.sh $STENCIL/install/lib/clay_launch/scripts/stop.sh
+
+echo "The update was completed. The window will close automatically in 2 seconds."
+sleep 2
+
+exit 0

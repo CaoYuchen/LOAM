@@ -1,0 +1,145 @@
+<launch>
+  <rosparam>
+    use_sim_time: true
+  </rosparam>
+
+  <include file="$(find ps3joy)/launch/ps3.launch" />
+
+  <include file="$(find local_planner)/launch/local_planner.launch" />
+
+  <include file="$(find terrain_analysis)/launch/terrain_analysis.launch" />
+
+  <!--include file="$(find waypoint_example)/launch/waypoint_example.launch" /-->
+
+  <!--include file="$(find point_cloud_stacker)/launch/key_pose_receiver.launch" /-->
+
+  <!--node pkg="online_pose_graph" type="onlineMapSmoother" name="onlineMapSmoother" output="screen" required="true">
+    <param name="poseSkipDis" type="double" value="0.2" />
+    <param name="poseStackNum" type="int" value="5" />
+    <param name="optIterNum" type="int" value="30" />
+    <param name="transOptIterNum" type="int" value="0" />
+    <param name="optSkipKeyPoseNum" type="int" value="0" />
+    <param name="minPointNum" type="int" value="500" />
+    <param name="oriUpdateRate" type="double" value="1.0" />
+    <param name="searchDis" type="double" value="1.5" />
+    <param name="matchDis" type="double" value="1.0" />
+    <param name="planeVertDis" type="double" value="0.2" />
+    <param name="voxelSize" type="double" value="0.3" />
+    <param name="matchRegionHori" type="double" value="2.5" />
+    <param name="matchRegionVert" type="double" value="2.5" />
+    <param name="adjMapRegionHori" type="double" value="5.0" />
+    <param name="adjMapRegionVert" type="double" value="2.5" />
+    <param name="matchNeglectRegHori" type="double" value="10" />
+    <param name="matchNeglectRegVert" type="double" value="2.5" />
+    <param name="matchWEqualVert" type="bool" value="true" />
+    <param name="matchNearestKeyPose" type="bool" value="false" />
+    <param name="matchSkipKeyPoseNum" type="int" value="0" />
+    <param name="sensorFwd" type="bool" value="true" />
+    <param name="rollFwdCorr" type="double" value="0" />
+    <param name="rollBwdCorr" type="double" value="0" />
+    <param name="pitchFwdCorr" type="double" value="0" />
+    <param name="pitchBwdCorr" type="double" value="0" />
+    <param name="yawFwdCorr" type="double" value="0" />
+    <param name="yawBwdCorr" type="double" value="0" />
+    <param name="vertFwdCorr" type="double" value="0" />
+    <param name="vertBwdCorr" type="double" value="0" />
+    <param name="scaleCorr" type="double" value="0" />
+  </node-->
+
+  <!--node pkg="online_pose_graph" type="multiRobotMapSmoother" name="multiRobotMapSmoother" output="screen" required="true">
+    <param name="poseSkipDis" type="double" value="0.2" />
+    <param name="poseStackNum" type="int" value="5" />
+    <param name="optIterNum" type="int" value="30" />
+    <param name="transOptIterNum" type="int" value="0" />
+    <param name="optSkipKeyPoseNum" type="int" value="0" />
+    <param name="minPointNum" type="int" value="500" />
+    <param name="oriUpdateRate" type="double" value="1.0" />
+    <param name="searchDis" type="double" value="1.5" />
+    <param name="matchDis" type="double" value="1.0" />
+    <param name="planeVertDis" type="double" value="0.2" />
+    <param name="voxelSize" type="double" value="0.3" />
+    <param name="matchRegionHori" type="double" value="2.5" />
+    <param name="matchRegionVert" type="double" value="2.5" />
+    <param name="adjMapRegionHori" type="double" value="5.0" />
+    <param name="adjMapRegionVert" type="double" value="2.5" />
+    <param name="matchNeglectRegHori" type="double" value="10" />
+    <param name="matchNeglectRegVert" type="double" value="2.5" />
+    <param name="matchWEqualVert" type="bool" value="true" />
+    <param name="matchNearestKeyPose" type="bool" value="false" />
+    <param name="matchFromOwnKeyPose" type="bool" value="false" />
+    <param name="matchSkipKeyPoseNum" type="int" value="0" />
+    <param name="sensorFwd" type="bool" value="true" />
+    <param name="rollFwdCorr" type="double" value="0" />
+    <param name="rollBwdCorr" type="double" value="0" />
+    <param name="pitchFwdCorr" type="double" value="0" />
+    <param name="pitchBwdCorr" type="double" value="0" />
+    <param name="yawFwdCorr" type="double" value="0" />
+    <param name="yawBwdCorr" type="double" value="0" />
+    <param name="vertFwdCorr" type="double" value="0" />
+    <param name="vertBwdCorr" type="double" value="0" />
+    <param name="scaleCorr" type="double" value="0" />
+    <param name="sensorFwdS1" type="bool" value="true" />
+    <param name="rollFwdCorrS1" type="double" value="0" />
+    <param name="rollBwdCorrS1" type="double" value="0" />
+    <param name="pitchFwdCorrS1" type="double" value="0" />
+    <param name="pitchBwdCorrS1" type="double" value="0" />
+    <param name="yawFwdCorrS1" type="double" value="0" />
+    <param name="yawBwdCorrS1" type="double" value="0" />
+    <param name="vertFwdCorrS1" type="double" value="0" />
+    <param name="vertBwdCorrS1" type="double" value="0" />
+    <param name="scaleCorrS1" type="double" value="0" />
+    <param name="sensorFwdS2" type="bool" value="true" />
+    <param name="rollFwdCorrS2" type="double" value="0" />
+    <param name="rollBwdCorrS2" type="double" value="0" />
+    <param name="pitchFwdCorrS2" type="double" value="0" />
+    <param name="pitchBwdCorrS2" type="double" value="0" />
+    <param name="yawFwdCorrS2" type="double" value="0" />
+    <param name="yawBwdCorrS2" type="double" value="0" />
+    <param name="vertFwdCorrS2" type="double" value="0" />
+    <param name="vertBwdCorrS2" type="double" value="0" />
+    <param name="scaleCorrS2" type="double" value="0" />
+    <param name="sensorFwdS3" type="bool" value="true" />
+    <param name="rollFwdCorrS3" type="double" value="0" />
+    <param name="rollBwdCorrS3" type="double" value="0" />
+    <param name="pitchFwdCorrS3" type="double" value="0" />
+    <param name="pitchBwdCorrS3" type="double" value="0" />
+    <param name="yawFwdCorrS3" type="double" value="0" />
+    <param name="yawBwdCorrS3" type="double" value="0" />
+    <param name="vertFwdCorrS3" type="double" value="0" />
+    <param name="vertBwdCorrS3" type="double" value="0" />
+    <param name="scaleCorrS3" type="double" value="0" />
+    <param name="usePoseInitS1" type="bool" value="false" />
+    <param name="poseInitXS1" type="double" value="0" />
+    <param name="poseInitYS1" type="double" value="0" />
+    <param name="poseInitZS1" type="double" value="0" />
+    <param name="poseInitYawS1" type="double" value="0" />
+    <param name="poseInitPitchS1" type="double" value="0" />
+    <param name="poseInitRollS1" type="double" value="0" />
+    <param name="usePoseInitS2" type="bool" value="false" />
+    <param name="poseInitXS2" type="double" value="0" />
+    <param name="poseInitYS2" type="double" value="0" />
+    <param name="poseInitZS2" type="double" value="0" />
+    <param name="poseInitYawS2" type="double" value="0" />
+    <param name="poseInitPitchS2" type="double" value="0" />
+    <param name="poseInitRollS2" type="double" value="0" />
+    <param name="usePoseInitS3" type="bool" value="false" />
+    <param name="poseInitXS3" type="double" value="0" />
+    <param name="poseInitYS3" type="double" value="0" />
+    <param name="poseInitZS3" type="double" value="0" />
+    <param name="poseInitYawS3" type="double" value="0" />
+    <param name="poseInitPitchS3" type="double" value="0" />
+    <param name="poseInitRollS3" type="double" value="0" />
+  </node-->
+
+  <node pkg="online_pose_graph" type="dummyMapSmoother" name="dummyMapSmoother" output="screen" required="true">
+    <param name="poseSkipDis" type="double" value="0.2" />
+    <param name="poseStackNum" type="int" value="5" />
+  </node>
+
+  <!--node pkg="online_pose_graph" type="transformMaintainer2" name="transformMaintainer2" output="screen" required="true"/-->
+
+  <!--node pkg="tf" type="static_transform_publisher" name="mapTransPublisher" args="0 0 0 1.5707963 0 1.5707963 map map_rot 1000"/-->
+
+  <!--node launch-prefix="nice" pkg="rviz" type="rviz" name="rviz2" args="-d $(find online_pose_graph)/online_pose_graph.rviz" respawn="true"/-->
+
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/laser_odometry/devel
+
+Name: velodyne_driver
+Description: Description of velodyne_driver
+Version: 1.2.0
+Cflags: -I/home/shum/Videos/mini_crusher_rocky_for_jean/mini-crusher-backup/Sept_23_crusher_JI_tuned/laser_odometry/src/velodyne_driver_16/velodyne_driver/include
+Libs: -L${prefix}/lib -lvelodyne_input
+Requires: diagnostic_updater nodelet roscpp tf velodyne_msgs

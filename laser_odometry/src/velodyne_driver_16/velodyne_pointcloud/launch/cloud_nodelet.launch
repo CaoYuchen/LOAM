@@ -1,0 +1,30 @@
+<!-- -*- mode: XML -*- -->
+<!-- run velodyne_pointcloud/CloudNodelet in a nodelet manager
+
+     arg: calibration = path to calibration file
+
+     $Id$
+  -->
+
+<launch>
+  <arg name="rotCorrX" default="0"/>
+  <arg name="rotCorrY" default="0"/>
+  <arg name="filterDis" default="-1.0"/>
+  <arg name="upward" default="true" />
+  <arg name="calibration16" default="" />
+  <arg name="calibration32" default="" />
+  <arg name="min_range" default="0.9" />
+  <arg name="max_range" default="130.0" />
+  <node pkg="nodelet" type="nodelet" name="cloud_nodelet"
+        args="load velodyne_pointcloud/CloudNodelet velodyne_nodelet_manager">
+    <param name="rotCorrX" value="$(arg rotCorrX)"/>
+    <param name="rotCorrY" value="$(arg rotCorrY)"/>
+    <param name="filterDis" value="$(arg filterDis)"/>
+    <param name="upward" value="$(arg upward)"/>
+    <param name="calibration16" value="$(arg calibration16)"/>
+    <param name="calibration32" value="$(arg calibration32)"/>
+    <param name="min_range" value="$(arg min_range)"/>
+    <param name="max_range" value="$(arg max_range)"/>
+    <param name="no_check_in" value="true"/>
+  </node>
+</launch>

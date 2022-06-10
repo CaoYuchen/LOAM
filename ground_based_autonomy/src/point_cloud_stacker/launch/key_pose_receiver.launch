@@ -1,0 +1,31 @@
+<launch>
+
+  <node pkg="point_cloud_stacker" type="keyPoseReceiver" name="keyPoseReceiver" output="screen">
+    <param name="save_data_dir" type="string" value="$(env HOME)/recordings" />
+    <param name="file_name" type="string" value="keypose" />
+    <param name="key_pose_topic_name" type="string" value="/key_pose_to_map" />
+    <param name="key_pose_path_topic_name" type="string" value="/key_pose_path" />
+  </node>
+
+  <node pkg="point_cloud_stacker" type="keyPoseReceiver" name="keyPoseReceiver_s1" output="screen">
+    <param name="save_data_dir" type="string" value="$(env HOME)/recordings" />
+    <param name="file_name" type="string" value="keypose_s1" />
+    <param name="key_pose_topic_name" type="string" value="/key_pose_to_map_s1" />
+    <param name="key_pose_path_topic_name" type="string" value="/key_pose_path_s1" />
+  </node>
+
+  <node pkg="point_cloud_stacker" type="keyPoseReceiver" name="keyPoseReceiver_s2" output="screen">
+    <param name="save_data_dir" type="string" value="$(env HOME)/recordings" />
+    <param name="file_name" type="string" value="keypose_s2" />
+    <param name="key_pose_topic_name" type="string" value="/key_pose_to_map_s2" />
+    <param name="key_pose_path_topic_name" type="string" value="/key_pose_path_s2" />
+  </node>
+
+  <node pkg="point_cloud_stacker" type="keyPoseReceiver" name="keyPoseReceiver_s3" output="screen">
+    <param name="save_data_dir" type="string" value="$(env HOME)/recordings" />
+    <param name="file_name" type="string" value="keypose_s3" />
+    <param name="key_pose_topic_name" type="string" value="/key_pose_to_map_s3" />
+    <param name="key_pose_path_topic_name" type="string" value="/key_pose_path_s3" />
+  </node>
+
+</launch>
