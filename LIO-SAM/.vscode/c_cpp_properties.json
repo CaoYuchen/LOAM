@@ -1,0 +1,32 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/opt/ros/noetic/include/**",
+        "/home/administrator/reac_ws/devel/include/**",
+        "/home/administrator/reac_ws/src/online_learning/bayes_people_tracker/include/**",
+        "/home/administrator/reac_ws/src/online_learning/bayestracking/include/**",
+        "/home/administrator/reac_ws/src/people/face_detector/include/**",
+        "/home/administrator/reac_ws/src/fast_gicp/include/**",
+        "/home/administrator/reac_ws/src/hdl_global_localization/include/**",
+        "/home/administrator/reac_ws/src/people/leg_detector/include/**",
+        "/home/administrator/reac_ws/src/lego_loam/lego_loam/include/**",
+        "/home/administrator/reac_ws/src/LIO-SAM/include/**",
+        "/home/administrator/reac_ws/src/ndt_omp/include/**",
+        "/home/administrator/reac_ws/src/online_learning/object3d_detector/include/**",
+        "/home/administrator/reac_ws/src/people/people_tracking_filter/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
